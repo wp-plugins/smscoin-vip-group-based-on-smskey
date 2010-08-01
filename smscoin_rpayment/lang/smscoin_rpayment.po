@@ -1,0 +1,320 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SmsCoin VIP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-18 16:47+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Vitaly <vitaly@smscoin.com>\n"
+"Language-Team: SmsCoin.com <vitaly@smscoin.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ./..\n"
+
+#: ../smscoin_rpayment.php:86
+msgid "List"
+msgstr "Список"
+
+#: ../smscoin_rpayment.php:87
+msgid "Tarifs"
+msgstr "Тарифы"
+
+#: ../smscoin_rpayment.php:88
+#: ../smscoin_rpayment.php:347
+#: ../smscoin_rpayment.php:348
+#: ../smscoin_rpayment.php:483
+#: ../smscoin_rpayment.php:484
+#: ../smscoin_rpayment.php:526
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../smscoin_rpayment.php:96
+msgid "Pages : "
+msgstr "Страницы:"
+
+#: ../smscoin_rpayment.php:116
+msgid "List received sms"
+msgstr "Список полученных смс "
+
+#: ../smscoin_rpayment.php:140
+#, php-format
+msgid "Password %s was deleted!"
+msgstr "Пароль %s, удален!"
+
+#: ../smscoin_rpayment.php:149
+#, php-format
+msgid "Password %s parameters was changed!"
+msgstr "Параметры пароля %s, изменены!"
+
+#: ../smscoin_rpayment.php:197
+msgid "Manually add a password:"
+msgstr "Добавить пароль вручную"
+
+#: ../smscoin_rpayment.php:201
+#: ../smscoin_rpayment.php:282
+msgid "Key"
+msgstr "Ключ"
+
+#: ../smscoin_rpayment.php:202
+#: ../smscoin_rpayment.php:283
+msgid "Password"
+msgstr "Пароль"
+
+#: ../smscoin_rpayment.php:203
+#: ../smscoin_rpayment.php:284
+msgid "Country"
+msgstr "Страна"
+
+#: ../smscoin_rpayment.php:204
+#: ../smscoin_rpayment.php:285
+msgid "Provider"
+msgstr "Оператор"
+
+#: ../smscoin_rpayment.php:205
+#: ../smscoin_rpayment.php:286
+msgid "Text"
+msgstr "Текст"
+
+#: ../smscoin_rpayment.php:206
+#: ../smscoin_rpayment.php:287
+msgid "Cost"
+msgstr "Стоимость"
+
+#: ../smscoin_rpayment.php:207
+#: ../smscoin_rpayment.php:289
+msgid "Time"
+msgstr "Время"
+
+#: ../smscoin_rpayment.php:208
+#: ../smscoin_rpayment.php:290
+msgid "Limit"
+msgstr "Лимит"
+
+#: ../smscoin_rpayment.php:223
+msgid "Add Password"
+msgstr "Добавить пароль"
+
+#: ../smscoin_rpayment.php:229
+msgid "List recived sms"
+msgstr "Список полученных смс"
+
+#: ../smscoin_rpayment.php:232
+msgid "Items per page"
+msgstr "Записей на страницу"
+
+#: ../smscoin_rpayment.php:233
+#: ../smscoin_rpayment.php:291
+msgid "Show"
+msgstr "Осталось"
+
+#: ../smscoin_rpayment.php:288
+msgid "Added"
+msgstr "Добавлен"
+
+#: ../smscoin_rpayment.php:292
+msgid "First enter"
+msgstr "Первый вход"
+
+#: ../smscoin_rpayment.php:294
+msgid "Options"
+msgstr "Опции"
+
+#: ../smscoin_rpayment.php:310
+msgid "Find"
+msgstr "Поиск"
+
+#: ../smscoin_rpayment.php:346
+#: ../smscoin_rpayment.php:482
+msgid "First you need to configure the module!"
+msgstr "Сначала нужно настроить модуль"
+
+#: ../smscoin_rpayment.php:372
+msgid "click to show / hide the additional text"
+msgstr "отобразить / скрыть дополнительный текст"
+
+#: ../smscoin_rpayment.php:371
+#: ../smscoin_rpayment.php:373
+msgid "Select Country"
+msgstr "Выбор страны"
+
+#: ../smscoin_rpayment.php:376
+#: ../smscoin_rpayment.php:378
+msgid "Select Provider"
+msgstr "Выбор оператора"
+
+#: ../smscoin_rpayment.php:382
+msgid "In order to receive a password, please send a message saying"
+msgstr "Для получения пароля, отправьте сообщение"
+
+#: ../smscoin_rpayment.php:382
+msgid "to the phone number"
+msgstr "на номер"
+
+#: ../smscoin_rpayment.php:383
+msgid "The message will cost you"
+msgstr "Стоимость сообщения "
+
+#: ../smscoin_rpayment.php:385
+msgid "You will receive your password in reply."
+msgstr "Пароль придет в ответном сообщении. "
+
+#: ../smscoin_rpayment.php:386
+msgid "Caution!"
+msgstr "Внимание!"
+
+#: ../smscoin_rpayment.php:387
+msgid "Pay attention to the message text and especially spaces.All the letters are latin.You'll be charged the full price, even in case of an error."
+msgstr "Обратите внимание на формат сообщения, на пробел между словами. Все буквы в сообщении латинские. В случае ошибки в сообщении, услуга считается оплаченной."
+
+#: ../smscoin_rpayment.php:391
+msgid "Error connecting to server! Update you'r tariffs"
+msgstr "Ошибка подключения к серверу! Обновите Вашу тарифную сетку."
+
+#: ../smscoin_rpayment.php:472
+msgid "Your local tariff scale"
+msgstr "Ваша локальная тарифная сетка"
+
+#: ../smscoin_rpayment.php:473
+msgid "Update your local tariff scale"
+msgstr "Обновление Вашей локальной копии тарифной сетки"
+
+#: ../smscoin_rpayment.php:475
+msgid "Last update: "
+msgstr "Последнее обновление:"
+
+#: ../smscoin_rpayment.php:478
+msgid "Update now: "
+msgstr "Обновить сейчас"
+
+#: ../smscoin_rpayment.php:497
+msgid "Module Settings"
+msgstr "Настройки модуля"
+
+#: ../smscoin_rpayment.php:511
+msgid "Wrong sms:key ID"
+msgstr "Не верный ID смс:ключа"
+
+#: ../smscoin_rpayment.php:513
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+#: ../smscoin_rpayment.php:527
+msgid "For using this module you have to be"
+msgstr "Для использования данного модуля требуется"
+
+#: ../smscoin_rpayment.php:527
+msgid "registered"
+msgstr "регистрация"
+
+#: ../smscoin_rpayment.php:527
+msgid " at smscoin.net ."
+msgstr "на сайте smscoin.com"
+
+#: ../smscoin_rpayment.php:529
+msgid "For more information about this service:"
+msgstr "Для дополнительной информации об услуге:"
+
+#: ../smscoin_rpayment.php:533
+msgid "Enter ID of you'r sms:key:"
+msgstr "Введите ID Вашего смс:ключа"
+
+#: ../smscoin_rpayment.php:533
+msgid "get sms:key"
+msgstr "получить смс:ключ"
+
+#: ../smscoin_rpayment.php:536
+msgid "Select default script language"
+msgstr "Выберите язык по умолчанию для скрипта смс:ключ:"
+
+#: ../smscoin_rpayment.php:545
+msgid "Input charset of you'r site (defaul value UTF-8):"
+msgstr "Введите кодировку символов (charset) Вашего сайта (значение по умолчанию UTF-8):"
+
+#: ../smscoin_rpayment.php:547
+msgid "Enter Secret code from settings of sms:key:"
+msgstr "Введите секретный код из настроек смс:ключа:"
+
+#: ../smscoin_rpayment.php:549
+msgid "Enter the Tag name for hide the content:"
+msgstr "Введите тэг для скрытия текста (значение по умолчанию rpayment):"
+
+#: ../smscoin_rpayment.php:553
+msgid "Use gzip ?"
+msgstr "Включить использование gzip ?"
+
+#: ../smscoin_rpayment.php:557
+msgid "Yes"
+msgstr "Да "
+
+#: ../smscoin_rpayment.php:558
+msgid "No"
+msgstr "Нет"
+
+#: ../smscoin_rpayment.php:564
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: ../smscoin_rpayment.php:599
+msgid "<h3>If you have already received the password, enter it here:</h3>"
+msgstr "<h3>Если Вы уже получили пароль, введите его здесь:</h3>"
+
+#: ../smscoin_rpayment.php:603
+msgid "Continue"
+msgstr "Продолжить"
+
+#: ../smscoin_rpayment.php:606
+msgid "<h3>To receive your password please send an sms</h3>"
+msgstr "<h3>Для получения пароля, отправьте смс сообщение </h3>"
+
+#: ../smscoin_rpayment.php:612
+msgid "Hidden text"
+msgstr "Скрытый текст"
+
+msgid "Enter the Tag name for instructions:"
+msgstr "Укажите тег для отображения страницы оплаты:"
+
+msgid "VIP Time in days:"
+msgstr "Время нахождения в группе VIP в днях:"
+
+msgid "Enter the email subject:"
+msgstr "Заголовок письма:"
+
+msgid "Enter the email message:"
+msgstr "Письмо"
+
+msgid "VIP time limited"
+msgstr "Время нахождения в группе VIP истекло."
+
+msgid "You removed from VIP group."
+msgstr "Вы переведены в ограниченную группу."
+
+msgid "Only VIP users can read the text"
+msgstr "Только VIP пользователи могут видeть этот контент."
+
+msgid "You already in VIP group!"
+msgstr "Вы уже в группе VIP!"
+
+msgid "Congratulation now you in VIP group!"
+msgstr "Операция прошла успешно, вы переведены в группу VIP!"
+
+msgid "Login require."
+msgstr "Вы не авторизованы."
+
+#~ msgid "SmsCoin R-key"
+#~ msgstr "Управление паролями"
+#~ msgid "Add Key"
+#~ msgstr "Добавить ключ"
+#~ msgid "Table"
+#~ msgstr "Таблица"
+#~ msgid "OYAEBU"
+#~ msgstr "ОЯЕБУ!"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "Добавлен"
+
