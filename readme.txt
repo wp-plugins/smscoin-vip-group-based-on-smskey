@@ -2,9 +2,9 @@
 Contributors: smscoin
 Donate link: http://smscoin.com/
 Tags:plugin, vip, hide, group, payment, billing, sms, content, post
-Requires at least: 2.5
-Tested up to: 2.9.2
-Stable tag: 0.2
+Requires at least: 3.5
+Tested up to: 3.1
+Stable tag: 0.3
 
 The following plugin enables you to provide your users with paid access to the
 content published on your website.
@@ -28,20 +28,20 @@ sms:key service registration and setup process are absolutely free.
 
 Localization: 
 
-	Русский, English
+	��������������, English
 
 For using this module you have to be registered at sms billing site:
 
        English:	http://smscoin.net/account/register/
 	   
-       Русский: http://smscoin.com/account/register/
+       ��������������: http://smscoin.com/account/register/
 	   
 	   
 Plugin page:
 
        English:	http://smscoin.net/software/engine/WordPress/
 	   
-       Русский: http://smscoin.com/software/engine/WordPress/
+       ��������������: http://smscoin.com/software/engine/WordPress/
 
 == Installation ==
 
@@ -98,13 +98,13 @@ For using this module you have to be registered at sms billing site:
 
        English:	http://smscoin.net/account/register/
 	   
-       Русский: http://smscoin.com/account/register/
+       ��������������: http://smscoin.com/account/register/
 	   
 Plugin page:
 
        English:	http://smscoin.net/software/engine/WordPress/
 	   
-       Русский: http://smscoin.com/software/engine/WordPress/
+       ��������������: http://smscoin.com/software/engine/WordPress/
 
 == Arbitrary section ==
 
@@ -112,11 +112,11 @@ For using this module you have to be registered at sms billing site:
 
        English:	http://smscoin.net/account/register/
 	   
-       Русский: http://smscoin.com/account/register/
+       ��������������: http://smscoin.com/account/register/
 	   
 Plugin page:
 
        English:	http://smscoin.net/software/engine/WordPress/
 	   
-       Русский: http://smscoin.com/software/engine/WordPress/
+       ��������������: http://smscoin.com/software/engine/WordPress/
 
