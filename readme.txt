@@ -28,20 +28,20 @@ sms:key service registration and setup process are absolutely free.
 
 Localization: 
 
-	��������������, English
+	Русский, English
 
 For using this module you have to be registered at sms billing site:
 
        English:	http://smscoin.net/account/register/
 	   
-       ��������������: http://smscoin.com/account/register/
+       Русский: http://smscoin.com/account/register/
 	   
 	   
 Plugin page:
 
        English:	http://smscoin.net/software/engine/WordPress/
 	   
-       ��������������: http://smscoin.com/software/engine/WordPress/
+       Русский: http://smscoin.com/software/engine/WordPress/
 
 == Installation ==
 
@@ -98,13 +98,13 @@ For using this module you have to be registered at sms billing site:
 
        English:	http://smscoin.net/account/register/
 	   
-       ��������������: http://smscoin.com/account/register/
+       Русский: http://smscoin.com/ru/account/register/
 	   
 Plugin page:
 
        English:	http://smscoin.net/software/engine/WordPress/
 	   
-       ��������������: http://smscoin.com/software/engine/WordPress/
+       Русский: http://smscoin.com/ru/software/engine/WordPress/
 
 == Arbitrary section ==
 
@@ -112,11 +112,11 @@ For using this module you have to be registered at sms billing site:
 
        English:	http://smscoin.net/account/register/
 	   
-       ��������������: http://smscoin.com/account/register/
+       Русский: http://smscoin.com/ru/account/register/
 	   
 Plugin page:
 
        English:	http://smscoin.net/software/engine/WordPress/
 	   
-       ��������������: http://smscoin.com/software/engine/WordPress/
+       Русский: http://smscoin.com/software/engine/WordPress/
 
