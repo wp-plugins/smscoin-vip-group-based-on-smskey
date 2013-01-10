@@ -7,7 +7,7 @@
 -----------------------------------------------------
  Copyright (c) 2008 SmsCoin
 =====================================================
- Ôàéë: result.php
+ Ã”Ã Ã©Ã«: result.php
 -----------------------------------------------------
  Purpose: payment module through SMS message
 =====================================================
@@ -18,7 +18,7 @@
 	global $wpdb, $table_prefix;
 
 	# the function returns an MD5 of parameters passed
-	# ôóíêöèÿ âîçâðàùàåò MD5 ïåðåäàííûõ åé ïàðàìåòðîâ
+	# Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã¢Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¥Ã² MD5 Ã¯Ã¥Ã°Ã¥Ã¤Ã Ã­Ã­Ã»Ãµ Ã¥Ã© Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã°Ã®Ã¢
 	function smscoin_rkey_ref_sign() {
 		$params = func_get_args();
 		$prehash = implode("::", $params);
@@ -26,16 +26,16 @@
 	}
 
 	# filtering junk off acquired parameters
-	# ïàðñèì ïîëó÷åííûå ïàðàìåòðû íà ïðåäìåò ìóñîðà
+	# Ã¯Ã Ã°Ã±Ã¨Ã¬ Ã¯Ã®Ã«Ã³Ã·Ã¥Ã­Ã­Ã»Ã¥ Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã°Ã» Ã­Ã  Ã¯Ã°Ã¥Ã¤Ã¬Ã¥Ã² Ã¬Ã³Ã±Ã®Ã°Ã 
 	foreach($_GET as $k => $v) {
 		$_GET[$k] = substr(trim(strip_tags($v)), 0, 250);
 	}
 
 	# service secret code
-	# ñåêðåòíûé êîä ñåðâèñà
+	# Ã±Ã¥ÃªÃ°Ã¥Ã²Ã­Ã»Ã© ÃªÃ®Ã¤ Ã±Ã¥Ã°Ã¢Ã¨Ã±Ã 
 	$secret_code = get_option('smscoin_rpayment_s_secret');
 	# collecting required data
-	# ñîáèðàåì íåîáõîäèìûå äàííûå
+	# Ã±Ã®Ã¡Ã¨Ã°Ã Ã¥Ã¬ Ã­Ã¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã»Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥
 
 	$key		=	intval($_GET["key"]);
 	$pair		=	$_GET["pair"];
@@ -48,20 +48,20 @@
 	$sign		=	$_GET["sign_v4"];
 
 	# making the reference signature
-	# ñîçäàåì ýòàëîííóþ ïîäïèñü
+	# Ã±Ã®Ã§Ã¤Ã Ã¥Ã¬ Ã½Ã²Ã Ã«Ã®Ã­Ã­Ã³Ã¾ Ã¯Ã®Ã¤Ã¯Ã¨Ã±Ã¼
 
 
 	$reference = smscoin_rkey_ref_sign($secret_code, $key, $pair, $timeout, $limit, $content, $country, $cost_local, $provider);
 
 
 	# validating the signature
-	# ïðîâåðÿåì, âåðíà ëè ïîäïèñü
+	# Ã¯Ã°Ã®Ã¢Ã¥Ã°Ã¿Ã¥Ã¬, Ã¢Ã¥Ã°Ã­Ã  Ã«Ã¨ Ã¯Ã®Ã¤Ã¯Ã¨Ã±Ã¼
 	if( $sign == $reference) {
 		# success, proceeding
-		# îáðàáàòûâàåì ïîëó÷åííûå äàííûå
+		# Ã®Ã¡Ã°Ã Ã¡Ã Ã²Ã»Ã¢Ã Ã¥Ã¬ Ã¯Ã®Ã«Ã³Ã·Ã¥Ã­Ã­Ã»Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥
 
 		# insert new transaction to DB
-		# Äîáàâëåíèå çàïèñè â áàçó äàííûõ
+		# Ã„Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã§Ã Ã¯Ã¨Ã±Ã¨ Ã¢ Ã¡Ã Ã§Ã³ Ã¤Ã Ã­Ã­Ã»Ãµ
 		$fields = "1, ".intval($key).", '".addslashes($pair)."','".addslashes($country)."',
 		'".addslashes($provider)."', '".addslashes($content)."', '".floatval($cost_local)."',
 		".time().", ".intval($timeout).", ".intval($limit).", ".intval($limit);
@@ -74,7 +74,7 @@
 		echo 'OK';
 	} else {
 		# failure, reporting error
-		# íåïðàâèëüíî ñîñòàâëåí çàïðîñ
+		# Ã­Ã¥Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã® Ã±Ã®Ã±Ã²Ã Ã¢Ã«Ã¥Ã­ Ã§Ã Ã¯Ã°Ã®Ã±
 		echo 'checksum failed';
 	}
 ?>

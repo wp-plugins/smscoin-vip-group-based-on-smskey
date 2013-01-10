@@ -60,10 +60,11 @@ function smscoin_rpayment_add_script() {
 		<link rel="stylesheet" href="'.$wpurl.'/wp-content/plugins/smscoin_rpayment/viewer.css" type="text/css" />
 		<script src="'.$wpurl.'/wp-content/plugins/smscoin_rpayment/dropdown.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			JSON_URL = "'.$wpurl.'/wp-content/plugins/smscoin_rpayment/data/local'.((function_exists('gzopen') && get_option('smscoin_rpayment_is_gzip') == 1)? '.json':'.js').'"
-			SERVICE = "'.$key_id.'";
-			INCLUDING_VAT = "'.__('including VAT','smscoin_rkey').'";
-			WITHOUT_VAT = "'.__('without VAT','smscoin_rkey').'";
+			var JSON_URL = "'.$wpurl.'/wp-content/plugins/smscoin_rpayment/data/local.js'.'"
+			var SERVICE = "'.$key_id.'";
+			var SELECT_PROVIDER = "'.__('Select Provider','smscoin_rkey').'";
+			var INCLUDING_VAT = "'.__('including VAT','smscoin_rkey').'";
+			var WITHOUT_VAT = "'.__('without VAT','smscoin_rkey').'";
 		</script>
 		<script type="text/javascript">
 		//<![CDATA[
@@ -473,17 +474,6 @@ function smscoin_rpayment_tariffs_cron() {
 					fclose($hnd);
 				}
 		}
-		if (function_exists('gzopen')) {
-			$filename = dirname(__FILE__).'/data/local.js';
-			$filename_gz = dirname(__FILE__).'/data/local.json';
-
-			$text_fp = fopen($filename,'r');
-			$gz_fp = gzopen($filename_gz,'w9');
-			while(!feof($text_fp)) {
-				gzwrite($gz_fp,fread($text_fp,655360));
-			}
-			fclose($text_fp);
-		}
 	}
 	# Deleting users with time limit from VIP group
 	# Удаление пользователей с группы VIP, время которых истекло
@@ -515,7 +505,7 @@ function smscoin_rpayment_tariffs() {
 			if( isset($_POST['action']) && $_POST['action'] === 'up') {
 				@ini_set('user_agent', 'smscoin_vip_cron');
 				$response = file_get_contents("http://service.smscoin.com/language/$language/json/key/".$key_id."/");
-				$LastAction .= 'From : <a onclick="window.open(this.href); return false;" href="http://service.smscoin.com/language/english/json/key/'.$key_id.'/">http://service.smscoin.com/language/english/json/key/'.$key_id.'/</a> ';
+				$LastAction .= 'From : <a onclick="window.open(this.href); return false;" href="http://service.smscoin.com/language/'.$language.'/json/key/'.$key_id.'/">http://service.smscoin.com/language/'.$language.'/json/key/'.$key_id.'/</a> ';
 				if ($response !== false) {
 						$filename = dirname(__FILE__).'/data/local.js';
 						if (($hnd = @fopen($filename, 'w')) !== false) {
@@ -532,18 +522,6 @@ function smscoin_rpayment_tariffs() {
 						}
 				} else {
 					$LastAction = 'Unable to connect to remote server';
-				}
-				$page = '';
-				if (function_exists('gzopen')) {
-					$filename = dirname(__FILE__).'/data/local.js';
-					$filename_gz = dirname(__FILE__).'/data/local.json';
-
-					$text_fp = fopen($filename,'r');
-					$gz_fp = gzopen($filename_gz,'w9');
-					while(!feof($text_fp)) {
-						gzwrite($gz_fp,fread($text_fp,655360));
-					}
-					fclose($text_fp);
 				}
 			}
 		}
@@ -596,7 +574,6 @@ function smscoin_rpayment_settings_page() {
 		update_option('smscoin_rpayment_s_subject', trim($_POST['s_subject']));
 		update_option('smscoin_rpayment_s_message', trim($_POST['s_message']));
 		update_option('smscoin_rpayment_s_secret', trim($_POST['s_secret']));
-		update_option('smscoin_rpayment_is_gzip', trim($_POST['is_gzip']));
 		if( trim($_POST['s_tag']) != '') {
 			update_option('smscoin_rpayment_s_tag', trim($_POST['s_tag']));
 		} else {
@@ -657,14 +634,6 @@ function smscoin_rpayment_settings_page() {
 				<p><?php echo __('Enter the email message:','smscoin_rpayment'); ?></p>
 				<textarea id="s_message" name="s_message" type="text" size="12" style="font-family: 'Courier New', monospace; font-size: 1.5em;" ><?php echo (get_option('smscoin_rpayment_s_message') == "" ? __('You removed from VIP group','smscoin_rpayment') : get_option('smscoin_rpayment_s_message') )?></textarea>
 
-				<p><?php echo __('Use gzip ?','smscoin_rpayment'); ?></p>
-				<p>
-					<select id="is_gzip" name="is_gzip" type="text"  style="font-family: \'Courier New\', monospace; font-size: 1.5em;">
-						<?php
-						echo '<option value="1" '.((get_option('smscoin_rpayment_is_gzip') == 1  )?' selected="selected"':'').'>'.__('Yes','smscoin_rpayment').'</option>
-							<option value="0" '.((get_option('smscoin_rpayment_is_gzip') == 0 )?' selected="selected"':'').'>'.__('No','smscoin_rpayment').'</option>';
-						?>
-					</select>
 				</p>
 
 

@@ -21,9 +21,9 @@ function clear(node) {
     }
 }
 
-function $(id) { return document.getElementById(id); }
+function smscoin_id(id) { return document.getElementById(id); }
 
-function show$(tagname, classname) {
+function show_smscoin_id(tagname, classname) {
     elements = document.getElementsByTagName(tagname);
     for (index in elements) {
         if (belongsToClass(elements[index], classname)) {
@@ -32,7 +32,7 @@ function show$(tagname, classname) {
     }
 }
 
-function hide$(tagname, classname) {
+function hide_smscoin_id(tagname, classname) {
     elements = document.getElementsByTagName(tagname);
     for (index in elements) {
         if (belongsToClass(elements[index], classname)) {
@@ -41,7 +41,7 @@ function hide$(tagname, classname) {
     }
 }
 
-function update$(tagname, classname, text) {
+function update_smscoin_id(tagname, classname, text) {
     elements = document.getElementsByTagName(tagname);
     for (index in elements) {
         if (belongsToClass(elements[index], classname)) {
@@ -50,7 +50,7 @@ function update$(tagname, classname, text) {
     }
 }
 
-function clear$(tagname, classname) {
+function clear_smscoin_id(tagname, classname) {
     elements = document.getElementsByTagName(tagname);
     for (index in elements) {
         if (belongsToClass(elements[index], classname)) {
@@ -60,26 +60,26 @@ function clear$(tagname, classname) {
 }
 
 function updateInstructions(data) {
-    show$('div', 'div_instructions');
-    clear$('span', 'message_text');
-    clear$('span', 'shortcode');
-    clear$('span', 'message_cost');
-    update$('span', 'message_text', [data.prefix, SERVICE].join(' '));
-    update$('span', 'shortcode', data.number);
-    update$('span', 'message_cost', [data.price, data.currency,
+    show_smscoin_id('div', 'div_instructions');
+    clear_smscoin_id('span', 'message_text');
+    clear_smscoin_id('span', 'shortcode');
+    clear_smscoin_id('span', 'message_cost');
+    update_smscoin_id('span', 'message_text', [data.prefix, SERVICE].join(' '));
+    update_smscoin_id('span', 'shortcode', data.number);
+    update_smscoin_id('span', 'message_cost', [data.price, data.currency,
         (parseInt(data.vat)? ('('+INCLUDING_VAT+')'): ('('+WITHOUT_VAT+')'))].join(' '));
-    clear$('p', 'notes');
+    clear_smscoin_id('p', 'notes');
     if (data.special) {
-        update$('p', 'notes', data.special);
-        show$('p', 'notes');
+        update_smscoin_id('p', 'notes', data.special);
+        show_smscoin_id('p', 'notes');
     } else {
-        hide$('p', 'notes');
+        hide_smscoin_id('p', 'notes');
     }
 }
 
 function selectProvider(i) {
     if (i == '-') {
-        hide$('div', 'div_instructions');
+        hide_smscoin_id('div', 'div_instructions');
         return;
     }
     updateInstructions(DATA.providers[i]);
@@ -87,20 +87,20 @@ function selectProvider(i) {
 
 function selectCountry(i) {
     if (i == '-') {
-        hide$('div', 'div_provider');
-        hide$('div', 'div_instructions');
+        hide_smscoin_id('div', 'div_provider');
+        hide_smscoin_id('div', 'div_instructions');
         return;
     }
     if (JSONResponse[i].providers && JSONResponse[i].providers.length) {
-        hide$('div', 'div_instructions');
-        show$('div', 'div_provider');
+        hide_smscoin_id('div', 'div_instructions');
+        show_smscoin_id('div', 'div_provider');
         DATA = JSONResponse[i];
-        clear$('select', 'select_provider');
+        clear_smscoin_id('select', 'select_provider');
         selects = document.getElementsByTagName('select');
         for (index in selects) {
             if (belongsToClass(selects[index], 'select_provider')) {
                 var def = document.createElement('option');
-                update(def, 'Выберите оператора');
+                update(def, SELECT_PROVIDER);
                 def.value = '-';
                 selects[index].appendChild(def);
                 for (var j = 0; j < DATA.providers.length; ++j) {
@@ -116,7 +116,7 @@ function selectCountry(i) {
         }
     }
     else {
-        hide$('div', 'div_provider');
+        hide_smscoin_id('div', 'div_provider');
         updateInstructions(JSONResponse[i]);
     }
 }
@@ -124,10 +124,10 @@ function selectCountry(i) {
 function JSONHandleResponse() {
     //document.body.style.backgroundImage = 'none';
     if (!window.JSONResponse) {
-        show$('div', 'div_fail');
+        show_smscoin_id('div', 'div_fail');
         return;
     }
-    show$('div', 'div_ui');
+    show_smscoin_id('div', 'div_ui');
     selects = document.getElementsByTagName('select');
     for (index in selects) {
         if (belongsToClass(selects[index], 'select_country')) {
